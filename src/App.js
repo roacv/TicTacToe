@@ -28,12 +28,14 @@ const ComponentB = () => {
 function App() {
 
   const [images, setImages] = useState([
-    "https://picsum.photos/id/100/200/200",
-    "https://picsum.photos/id/200/200/200",
-    "https://picsum.photos/id/300/200/200",
-    "https://picsum.photos/id/400/200/200",
-    "https://picsum.photos/id/500/200/200",
+    { id: 1, url: "https://picsum.photos/id/100/200/200" },
+    { id: 1, url: "https://picsum.photos/id/200/200/200" },
+    { id: 1, url: "https://picsum.photos/id/300/200/200" },
+    { id: 1, url: "https://picsum.photos/id/400/200/200" },
+    { id: 1, url: "https://picsum.photos/id/500/200/200" },
   ])
+
+  const [pos, setPos] = useState(0);
 
   const [show, setShow] = useState(false);
 
@@ -67,8 +69,9 @@ function App() {
   }
 
 
-  const selectImage = img => {
-    imgRef.current.src = img;
+  const selectImage = (img, pos) => {
+    imgRef.current.src = img.url;
+    setPos(pos);
   }
 
   return (
@@ -81,21 +84,23 @@ function App() {
       <input type="text" id="name2" ref={(input) => name2Ref = input} />
       <button onClick={capturarValor2}>Capturar Valor</button>
 
-
-
-
       <div className="d-flex w-100 flex-row">
         {
           images.map((img, index) => {
+            let style = index === pos ? { border: '1px solid red'} : { border: '1px solid black'}
             return (
               <div className="card m-1" key={index}>
-                <img src={img} alt="" width={50} height={50} onClick={() => selectImage(img)} />
+                <img src={img.url} alt="" width={50} height={50} onClick={() => selectImage(img, index)} style={style} />
               </div>
             )
           })
         }
       </div>
-      <img height={300} width={300} ref={imgRef} src={images[0]} />
+      <img height={300} width={300} ref={imgRef} src={images[pos].url} />
+      <div className="button-group my-2">
+      <button className="btn btn-info btn-sm m-1" onClick={() => setPos(pos => pos === 0 ? images.length - 1 : pos - 1)}>prev</button>
+      <button className="btn btn-info btn-sm m-1" onClick={() => setPos(pos => pos === images.length - 1 ? 0 : pos + 1)}>next</button> 
+      </div>
 
       {
         show ? (
