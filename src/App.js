@@ -48,8 +48,9 @@ function App() {
 
   useEffect(() => {
     if (divRef.current) {
-      divRef.current.style.width = '100px';
-      divRef.current.style.height = '100px';
+      divRef.current.style.width = '70px';
+      divRef.current.style.height = '70px';
+      divRef.current.style.borderRadius = '50px';
       divRef.current.style.backgroundColor = 'red';
     }
   }, [])
@@ -76,7 +77,10 @@ function App() {
 
   return (
     <>
-      <div ref={divRef}>Hola</div>
+      <div className='poste mx-auto'></div>
+      <div className='container py-3'>
+        <div className='mx-auto' ref={divRef}></div>
+      </div>
       <button onClick={cambiarColor}>Cambiar Color</button>
       <input type="text" id="name1" ref={inputNameRef} defaultValue="Hola" />
       <button onClick={capturarValor}>Capturar Valor</button>

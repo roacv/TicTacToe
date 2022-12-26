@@ -1,0 +1,11 @@
+.poste{
+    background-color: black;
+    width: 25px;
+    height: 70px;
+}
+.container{
+    background-color: black;
+    width: 100px;
+    height: 300px;
+    border-radius: 25px;
+}
