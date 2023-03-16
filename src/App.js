@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react';
+import Choose from './choose';
 
 const Ampolleta = () =>{
   const [color, setColortate] = useState('red');
@@ -18,13 +19,14 @@ const Ampolleta = () =>{
 }
 
 function App() {
-
+  const [weapon, SetWeapon] = "";
   return (
     <>
       <div className='mesa'>
         <h1 className='text-center text-white fw-bold'>Tic Tac Toe in React.js</h1>
         <h2 className='text-center text-white'>Pick a weapon</h2>
-        <div className='poste mx-auto'></div>
+        <Choose/>
+        {/* <div className='poste mx-auto'></div> */}
         <div className='container py-3'>
           <Ampolleta />
         </div>
