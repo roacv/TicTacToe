@@ -21,9 +21,13 @@ function App() {
 
   return (
     <>
-      <div className='poste mx-auto'></div>
-      <div className='container py-3'>
-        <Ampolleta />
+      <div className='mesa'>
+        <h1 className='text-center text-white fw-bold'>Tic Tac Toe in React.js</h1>
+        <h2 className='text-center text-white'>Pick a weapon</h2>
+        <div className='poste mx-auto'></div>
+        <div className='container py-3'>
+          <Ampolleta />
+        </div>
       </div>
     </>
   );

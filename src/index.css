@@ -1,3 +1,10 @@
+.mesa{
+    width: 1000px;
+    height: 800px;
+    background-color: rgb(100, 100, 100);
+    margin-left: auto;
+    margin-right: auto;
+}
 .poste{
     background-color: black;
     width: 25px;
