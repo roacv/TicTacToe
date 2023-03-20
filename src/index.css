@@ -7,20 +7,59 @@
 }
 .choose{
     width: 600px;
-    height: 200px;
+    height: 300px;
     background-color: rgb(80, 80, 80);
     margin-top: 100px;
+    padding-top: 30px;
     margin-left: auto;
     margin-right: auto;
 }
-.poste{
-    background-color: black;
-    width: 25px;
-    height: 70px;
+.weapon{
+    font-size: 60px;
+    width: 80px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 90px;
+    background-color: rgb(39, 39, 39);
 }
-.container{
-    background-color: black;
-    width: 100px;
-    height: 250px;
-    border-radius: 25px;
+.weapon:hover{
+    background-color: rgb(100, 100, 100);
 }
+.tablero {
+    width: 800px;
+    height: 600px;
+    background-color: rgb(80, 80, 80);
+    margin-left: auto;
+    margin-right: auto;
+}
+.tablero .row {
+    margin-left:10px;
+    padding-top:100px;
+    margin-right: 10px;
+}
+.tablero .col{
+    padding:0px;
+}
+.tablero .hr{
+    color: white;
+    width: 200px;
+}
+.tablero .line{
+    margin-top: 5px;
+    margin-right: 0px;
+    border-bottom: solid;
+    border-color: white;
+}
+.tablero .borde{
+    border-right-style:solid;
+    border-color: white;
+}
+.tablero .weapon{
+    font-size: 60px;
+    width: 220px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 20px;
+    background-color: rgb(39, 39, 39);
+}
+
